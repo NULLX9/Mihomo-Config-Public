@@ -44,21 +44,8 @@ proxy-groups:
     interval: 250
 
   # 分流节点
-  - name: OpenAi服务
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/ChatGPT.png
-    type: select
-    proxies:
-      - 节点选择
-      - 美国节点
-      - DIRECT
   - name: 微软CDN服务
     icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Microsoft.png
-    type: select
-    proxies:
-      - 节点选择
-      - DIRECT
-  - name: 必应服务
-    icon: https://raw.githubusercontent.com/Orz-3/mini/refs/heads/master/Color/Bing.png
     type: select
     proxies:
       - 节点选择
@@ -324,7 +311,7 @@ rule-providers:
     behavior: classical
     type: http
     interval: 86400
-  
+
   # 广告
   # 广告域名
   AdGuard:
@@ -342,11 +329,9 @@ rules:
   - RULE-SET,ChinaCompanyIp,DIRECT
   - RULE-SET,Download,DIRECT
   - RULE-SET,Stun,DIRECT
-  - RULE-SET,OpenAi,OpenAi服务
-  - RULE-SET,MicrosoftCDN,微软CDN服务
-  - RULE-SET,Bing,必应服务
-  - RULE-SET,Microsoft,微软服务
   - RULE-SET,Copilot,微软Copilot
+  - RULE-SET,MicrosoftCDN,微软CDN服务
+  - RULE-SET,Microsoft,微软服务
   - RULE-SET,OneDrive,微软OneDrive云盘
   - RULE-SET,Google,谷歌服务
   - RULE-SET,Spotify,Spotify音乐
