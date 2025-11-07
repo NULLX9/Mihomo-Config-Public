@@ -37,6 +37,7 @@ proxy-groups:
   # 节点故障自动转移
   - name: 故障转移
     icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Drill.png
+    type: fallback
     include-all: true
     filter: (?i)香港|HK|台湾|TW|新加坡|SG|日本|JP
     url: https://www.gstatic.com/generate_204
