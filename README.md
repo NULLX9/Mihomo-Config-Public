@@ -12,7 +12,7 @@
 
 ## 部分链接
 
-[Clash Verge Rev 策略组图标](https://markdown.com.cn/basic-syntax/links.html)<br>
+[Clash Verge Rev 策略组图标](https://www.clashverge.dev/guide/group_icon/group_icon.html)<br>
 [Mihomo 路由规则](https://wiki.metacubex.one/config/rules/)<br>
 [代理规则集](https://ruleset.zcsouls.com/)<br>
 [ClashMi](https://github.com/KaringX/clashmi)<br>

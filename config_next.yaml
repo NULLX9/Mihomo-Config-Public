@@ -101,6 +101,10 @@ proxy-groups:
       - 节点选择
       - DIRECT
 
+  # 广告拦截
+  - name: 广告拦截
+    icon: 
+
   # 地区节点
   - name: 香港节点
     icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Hong_Kong.png
@@ -316,6 +320,16 @@ rule-providers:
     behavior: classical
     type: http
     interval: 86400
+  
+  # 广告
+  # 广告域名
+  AdGuard:
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt
+    path: ./ruleset/reject.txt
+    format: text
+    behavior: classical
+    type: http
+    interval: 86400
 
 # 规则
 rules:
@@ -336,5 +350,6 @@ rules:
   - RULE-SET,GoogleFCM,节点选择
   - RULE-SET,ProxyGFWList,节点选择
   - RULE-SET,Global,节点选择
+  - RULE-SET,AdGuard,广告拦截
   - GEOIP,CN,DIRECT
   - MATCH,节点选择
