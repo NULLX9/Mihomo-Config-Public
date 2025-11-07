@@ -103,7 +103,11 @@ proxy-groups:
 
   # 广告拦截
   - name: 广告拦截
-    icon: 
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/AdBlack.png
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
 
   # 地区节点
   - name: 香港节点
