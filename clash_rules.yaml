@@ -1,0 +1,289 @@
+# 该配置直接使用Clash-Rules仓库规则。
+# 代理组
+proxy-groups:
+  # 节点信息
+  - name: 节点信息
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Server.png
+    type: select
+    include-all: true
+    filter: (?i)剩余流量|下次重置|套餐到期
+
+  # 通用节点选择
+  - name: 节点选择
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Available.png
+    type: select
+    proxies:
+      - 自动选择
+      - 香港节点
+      - 台湾节点
+      - 新加坡节点
+      - 日本节点
+      - 美国节点
+      - 尼日利亚节点
+      - 故障转移
+      - DIRECT
+
+  # 常用区域节点自动选择
+  - name: 自动选择
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Auto.png
+    type: url-test
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 香港节点
+      - 台湾节点
+      - 新加坡节点
+      - 日本节点
+
+  # 节点故障自动转移
+  - name: 故障转移
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Drill.png
+    type: fallback
+    include-all: true
+    filter: (?i)香港|HK|台湾|TW|新加坡|SG|日本|JP
+    url: https://www.gstatic.com/generate_204
+    interval: 250
+
+  # 分流节点
+  - name: 常用直连应用
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/App_Store.png
+    type: select
+    proxies: 
+      - DIRECT
+      - 节点选择
+  - name: 苹果CN
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Apple.png
+    type: select
+    proxies:
+      - DIRECT
+      - 节点选择
+  - name: 云上贵州
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/iCloud.png
+    type: select
+    proxies:
+      - DIRECT
+      - 节点选择
+  - name: 私有网络
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Puzzle.png
+    type: select
+    proxies:
+      - DIRECT
+      - 节点选择
+  - name: 广告拦截
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/AdBlack.png
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+  - name: 谷歌
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Google_Search.png
+    type: select
+    proxies:
+      - 节点选择
+      - DIRECT
+  - name: 常用代理
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Proxy.png
+    type: select
+    proxies:
+      - 节点选择
+      - DIRECT
+  - name: 常用直连
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Direct.png
+    type: select
+    proxies:
+      - DIRECT
+      - 节点选择
+  - name: 保留IP
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Bypass.png
+    type: select
+    proxies:
+      - DIRECT
+      - 节点选择
+  - name: 大陆IP
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/China.png
+    type: select
+    proxies:
+      - DIRECT
+      - 节点选择
+  - name: 电报
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Telegram.png
+    type: select
+    proxies:
+      - 节点选择
+      - 自动选择
+      - 香港节点
+      - 台湾节点
+      - 新加坡节点
+      - 日本节点
+      - 美国节点
+      - 尼日利亚节点
+      - 故障转移
+      - DIRECT
+
+  # 地区节点
+  - name: 香港节点
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Hong_Kong.png
+    include-all: true
+    type: url-test
+    interval: 300
+    tolerance: 50
+    filter: (?i)香港|HK
+  - name: 台湾节点
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Taiwan.png
+    include-all: true
+    type: url-test
+    interval: 300
+    tolerance: 50
+    filter: (?i)台湾|TW
+  - name: 新加坡节点
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Singapore.png
+    include-all: true
+    type: url-test
+    interval: 300
+    tolerance: 50
+    filter: (?i)新加坡|SG
+  - name: 日本节点
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Japan.png
+    include-all: true
+    type: url-test
+    interval: 300
+    tolerance: 50
+    filter: (?i)日本|JP
+  - name: 美国节点
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/United_States.png
+    include-all: true
+    type: url-test
+    interval: 300
+    tolerance: 50
+    filter: (?i)美国|US
+  - name: 尼日利亚节点
+    icon: https://raw.githubusercontent.com/lipis/flag-icons/5f40463ce1d8731f4e22dcb8acbc715b01573c54/flags/1x1/ng.svg
+    include-all: true
+    type: url-test
+    interval: 300
+    tolerance: 50
+    filter: (?i)尼日利亚|NG
+
+  # 全局节点
+  - name: GLOBAL
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Global.png
+    type: select
+    proxies:
+      - 自动选择
+      - 香港节点
+      - 台湾节点
+      - 新加坡节点
+      - 日本节点
+      - 美国节点
+      - 故障转移
+      - DIRECT
+
+rule-providers:
+  reject:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/reject.txt"
+    path: ./ruleset/reject.yaml
+    interval: 86400
+
+  icloud:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/icloud.txt"
+    path: ./ruleset/icloud.yaml
+    interval: 86400
+
+  apple:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt"
+    path: ./ruleset/apple.yaml
+    interval: 86400
+
+  google:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/google.txt"
+    path: ./ruleset/google.yaml
+    interval: 86400
+
+  proxy:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+
+  direct:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+    path: ./ruleset/direct.yaml
+    interval: 86400
+
+  private:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
+    path: ./ruleset/private.yaml
+    interval: 86400
+
+  gfw:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
+    path: ./ruleset/gfw.yaml
+    interval: 86400
+
+  tld-not-cn:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/tld-not-cn.txt"
+    path: ./ruleset/tld-not-cn.yaml
+    interval: 86400
+
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/telegramcidr.txt"
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
+
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
+    path: ./ruleset/cncidr.yaml
+    interval: 86400
+
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
+
+  applications:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
+    path: ./ruleset/applications.yaml
+    interval: 86400
+
+rules:
+  - RULE-SET,applications,常用直连应用
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - RULE-SET,private,私有网络
+  - RULE-SET,reject,广告拦截
+  - RULE-SET,icloud,云上贵州
+  - RULE-SET,apple,苹果CN
+  - RULE-SET,google,谷歌
+  - RULE-SET,proxy,常用代理
+  - RULE-SET,direct,常用直连
+  - RULE-SET,lancidr,保留IP
+  - RULE-SET,cncidr,大陆IP
+  - RULE-SET,telegramcidr,电报
+  - GEOIP,LAN,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,节点选择
