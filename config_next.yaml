@@ -86,6 +86,7 @@ proxy-groups:
     type: select
     proxies:
       - 节点选择
+      - 尼日利亚节点
       - DIRECT
   - name: 国外媒体
     icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/ForeignMedia.png
