@@ -324,17 +324,17 @@ rules:
   - RULE-SET,ChinaCompanyIp,DIRECT
   - RULE-SET,Download,DIRECT
   - RULE-SET,Stun,DIRECT
-  - RULE-SET,GoogleFCM,节点选择
-  - RULE-SET,ProxyGFWList,节点选择
-  - RULE-SET,Global,节点选择
   - RULE-SET,OpenAi,OpenAi服务
   - RULE-SET,MicrosoftCDN,微软CDN服务
   - RULE-SET,Bing,必应服务
   - RULE-SET,Microsoft,微软服务
   - RULE-SET,Copilot,微软Copilot
+  - RULE-SET,OneDrive,微软OneDrive云盘
   - RULE-SET,Google,谷歌服务
   - RULE-SET,Spotify,Spotify音乐
   - RULE-SET,ProxyMedia,国外媒体
-  - RULE-SET,OneDrive,微软OneDrive云盘
+  - RULE-SET,GoogleFCM,节点选择
+  - RULE-SET,ProxyGFWList,节点选择
+  - RULE-SET,Global,节点选择
   - GEOIP,CN,DIRECT
   - MATCH,节点选择
