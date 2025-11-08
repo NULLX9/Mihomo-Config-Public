@@ -101,7 +101,7 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Area.png
     include-all: true
     type: select
-    filter: (?i)^(?!.*(?:香港|HK|台湾|TW|新加坡|SG|日本|JP|美国|US|剩余流量|下次重置|套餐到期)).*
+    exclude-filter: (?i)香港|台湾|新加坡|日本|美国
 
   # 全局节点
   - name: GLOBAL
