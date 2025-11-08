@@ -231,11 +231,11 @@ rule-providers:
     path: ./ruleset/proxy.yaml
     interval: 86400
 
-  全局直连:
+  direct:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/全局直连.txt"
-    path: ./ruleset/全局直连.yaml
+    url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt"
+    path: ./ruleset/direct.yaml
     interval: 86400
 
   private:
@@ -297,7 +297,7 @@ rules:
   - RULE-SET,icloud,云上贵州
   - RULE-SET,apple,苹果CN
   - RULE-SET,google,谷歌
-  - RULE-SET,全局直连,常用直连
+  - RULE-SET,direct,常用直连
   - RULE-SET,proxy,常用代理
   - RULE-SET,lancidr,保留IP
   - RULE-SET,cncidr,大陆IP
