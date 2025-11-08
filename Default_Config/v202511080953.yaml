@@ -1,0 +1,102 @@
+# 代理组
+proxy-groups:
+  # 节点信息
+  - name: 节点信息
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Server.png
+    type: select
+    include-all: true
+    filter: (?i)剩余流量|下次重置|套餐到期
+
+  # 通用节点选择
+  - name: 节点选择
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Available.png
+    type: select
+    proxies:
+      - 自动选择
+      - 香港节点
+      - 台湾节点
+      - 新加坡节点
+      - 日本节点
+      - 美国节点
+      - 尼日利亚节点
+      - 故障转移
+      - DIRECT
+
+  # 常用区域节点自动选择
+  - name: 自动选择
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Auto.png
+    type: url-test
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 香港节点
+      - 台湾节点
+      - 新加坡节点
+      - 日本节点
+
+  # 节点故障自动转移
+  - name: 故障转移
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Drill.png
+    type: fallback
+    include-all: true
+    filter: (?i)香港|HK|台湾|TW|新加坡|SG|日本|JP
+    url: https://www.gstatic.com/generate_204
+    interval: 250
+
+  # 地区节点
+  - name: 香港节点
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Hong_Kong.png
+    include-all: true
+    type: url-test
+    interval: 300
+    tolerance: 50
+    filter: (?i)香港|HK
+  - name: 台湾节点
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Taiwan.png
+    include-all: true
+    type: url-test
+    interval: 300
+    tolerance: 50
+    filter: (?i)台湾|TW
+  - name: 新加坡节点
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Singapore.png
+    include-all: true
+    type: url-test
+    interval: 300
+    tolerance: 50
+    filter: (?i)新加坡|SG
+  - name: 日本节点
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Japan.png
+    include-all: true
+    type: url-test
+    interval: 300
+    tolerance: 50
+    filter: (?i)日本|JP
+  - name: 美国节点
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/United_States.png
+    include-all: true
+    type: url-test
+    interval: 300
+    tolerance: 50
+    filter: (?i)美国|US
+  - name: 尼日利亚节点
+    icon: https://raw.githubusercontent.com/lipis/flag-icons/5f40463ce1d8731f4e22dcb8acbc715b01573c54/flags/1x1/ng.svg
+    include-all: true
+    type: url-test
+    interval: 300
+    tolerance: 50
+    filter: (?i)尼日利亚|NG
+
+  # 全局节点
+  - name: GLOBAL
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Global.png
+    type: select
+    proxies:
+      - 自动选择
+      - 香港节点
+      - 台湾节点
+      - 新加坡节点
+      - 日本节点
+      - 美国节点
+      - 故障转移
+      - DIRECT
