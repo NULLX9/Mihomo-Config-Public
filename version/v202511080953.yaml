@@ -44,6 +44,14 @@ proxy-groups:
     url: https://www.gstatic.com/generate_204
     interval: 250
 
+  # 剩余规则节点
+  - name: Final
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Final.png
+    type: select
+    proxies:
+      - 节点选择
+      - DIRECT
+
   # 地区节点
   - name: 香港节点
     icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Hong_Kong.png
@@ -289,7 +297,7 @@ rules:
   - RULE-SET,telegramcidr,电报
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
-  - MATCH,节点选择
+  - MATCH,Final
 
 ### ⬇⬇⬇分界线⬇⬇⬇ ### 以下为移动端添加
 # GeoData模式
