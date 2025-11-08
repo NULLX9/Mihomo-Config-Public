@@ -100,6 +100,3 @@ proxy-groups:
       - 美国节点
       - 故障转移
       - DIRECT
-
-# GeoData模式
-geodata-mode: true
