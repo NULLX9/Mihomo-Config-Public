@@ -29,6 +29,7 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
+      - 故障转移
 
   # 常用区域节点自动选择
   - name: 自动选择
