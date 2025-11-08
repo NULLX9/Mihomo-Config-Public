@@ -291,6 +291,7 @@ rules:
   - GEOIP,CN,DIRECT
   - MATCH,节点选择
 
+### ⬇⬇⬇分界线⬇⬇⬇ ### 以下为移动端添加
 # GeoData模式
 geodata-mode: true
 geox-url:
@@ -298,3 +299,6 @@ geox-url:
   geosite: "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
 geo-auto-update: true
 geo-update-interval: 24
+
+# 局域网连接
+allow-lan: false
