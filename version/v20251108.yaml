@@ -25,11 +25,10 @@ proxy-groups:
 
   # 通用直连选择
   - name: 全局直连
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/全局直连.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Direct.png
     type: select
     proxies:
       - DIRECT
-      - 故障转移
 
   # 常用区域节点自动选择
   - name: 自动选择
