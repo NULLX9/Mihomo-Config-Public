@@ -59,7 +59,7 @@ proxy-groups:
       - 节点选择
       - 全局直连
 
-  # 地区节点
+  # 常用地区节点
   - name: 香港节点
     icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Hong_Kong.png
     include-all: true
@@ -101,7 +101,7 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Area.png
     include-all: true
     type: select
-    filter: (?i)^(?i.*(?:香港|HK|台湾|TW|新加坡|SG|日本|JP|美国|US|剩余流量|下次重置|套餐到期)).*
+    filter: (?i)^(?!.*(?:香港|HK|台湾|TW|新加坡|SG|日本|JP|美国|US|剩余流量|下次重置|套餐到期)).*
 
   # 全局节点
   - name: GLOBAL
