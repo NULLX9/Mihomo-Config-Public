@@ -95,6 +95,12 @@ proxy-groups:
     interval: 300
     tolerance: 50
     filter: (?i)美国|US
+  - name: 尼日利亚节点
+    include-all: true
+    type: url-test
+    interval: 300
+    tolerance: 50
+    filter: (?i)尼日利亚|NG
 
   # 其他地区节点
   - name: 手动选择
