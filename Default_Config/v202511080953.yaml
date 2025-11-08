@@ -103,5 +103,3 @@ proxy-groups:
 
 # GeoData模式
 geodata-mode: true
-geox-url:
-  geoip: "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat"
