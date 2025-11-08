@@ -100,3 +100,8 @@ proxy-groups:
       - 美国节点
       - 故障转移
       - DIRECT
+
+# GeoData模式
+geodata-mode: true
+geox-url:
+  geoip: "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat"
