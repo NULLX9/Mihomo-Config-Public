@@ -95,6 +95,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     filter: (?i)美国|US
+
+  # 其他地区节点
   - name: 手动选择
     icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Area.png
     include-all: true
