@@ -8,7 +8,7 @@
 
 ## 使用方式
 
-复制 [clash_rules.yaml](https://raw.githubusercontent.com/NULLX9/Mihomo-Config-Public/refs/heads/main/clash_rules.yaml) 地址，导入到 *代理客户端* 的**覆写**选项中。<br>
+复制 [v0.1.1](https://raw.githubusercontent.com/NULLX9/Mihomo-Config-Public/refs/heads/main/version/v202511080953.yaml) 地址，导入到 *代理客户端* 的**覆写**选项中。<br>
 
 ## 部分链接
 
