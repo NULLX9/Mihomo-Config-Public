@@ -10,8 +10,6 @@
 
 复制 [测试](url) 地址，导入到 *代理客户端* 的**覆写**选项中。<br>
 
-> 建议使用 **clash_rules.yaml** ，该配置使用[Clash Rules](https://github.com/Loyalsoldier/clash-rules)提供的规则。
-
 ## 部分链接
 
 [Clash Verge Rev 策略组图标](https://www.clashverge.dev/guide/group_icon/group_icon.html)<br>
