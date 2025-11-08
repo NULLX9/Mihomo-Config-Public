@@ -8,7 +8,7 @@
 
 ## 使用方式
 
-复制 **\*.yaml** 的 *raw* 地址，导入到 *代理客户端* 的**覆写**选项中。<br>
+复制 [测试](url) 地址，导入到 *代理客户端* 的**覆写**选项中。<br>
 
 > 建议使用 **clash_rules.yaml** ，该配置使用[Clash Rules](https://github.com/Loyalsoldier/clash-rules)提供的规则。
 
