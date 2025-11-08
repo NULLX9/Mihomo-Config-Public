@@ -19,8 +19,8 @@ proxy-groups:
       - 新加坡节点
       - 日本节点
       - 美国节点
-      - 尼日利亚节点
       - 故障转移
+      - 手动选择
       - 全局直连
 
   # 通用直连选择
@@ -95,13 +95,11 @@ proxy-groups:
     interval: 300
     tolerance: 50
     filter: (?i)美国|US
-  - name: 尼日利亚节点
-    icon: https://raw.githubusercontent.com/lipis/flag-icons/5f40463ce1d8731f4e22dcb8acbc715b01573c54/flags/1x1/ng.svg
+  - name: 手动选择
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Area.png
     include-all: true
-    type: url-test
-    interval: 300
-    tolerance: 50
-    filter: (?i)尼日利亚|NG
+    type: select
+    filter: (?i)^(?i.*(?:香港|HK|台湾|TW|新加坡|SG|日本|JP|美国|US|剩余流量|下次重置|套餐到期))
 
   # 全局节点
   - name: GLOBAL
@@ -190,7 +188,6 @@ proxy-groups:
       - 新加坡节点
       - 日本节点
       - 美国节点
-      - 尼日利亚节点
       - 故障转移
       - 全局直连
 
