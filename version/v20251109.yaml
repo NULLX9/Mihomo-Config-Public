@@ -133,12 +133,12 @@ proxy-groups:
       - 全局直连
       - 节点选择
 
-  - name: 下载服务
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Download.png
+  - name: 微软Copilot
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Copilot.png
     type: select
     proxies:
-      - 全局直连
       - 节点选择
+      - 全局直连
 
   - name: OneDrive云
     icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/OneDrive.png
@@ -147,19 +147,12 @@ proxy-groups:
       - 全局直连
       - 节点选择
 
-  - name: 广告拦截
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Advertising.png
+  - name: 下载服务
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Download.png
     type: select
     proxies:
-      - REJECT
       - 全局直连
-
-  - name: 微软Copilot
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Copilot.png
-    type: select
-    proxies:
       - 节点选择
-      - 全局直连
 
   - name: 谷歌服务
     icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Google_Search.png
@@ -174,6 +167,20 @@ proxy-groups:
     proxies:
       - 节点选择
       - 手动选择
+      - 全局直连
+
+  - name: Telegram电报
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Telegram.png
+    type: select
+    proxies:
+      - 节点选择
+      - 全局直连
+
+  - name: 广告拦截
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Advertising.png
+    type: select
+    proxies:
+      - REJECT
       - 全局直连
 
 # 规则集
@@ -274,6 +281,14 @@ rule-providers:
     path: ./ruleset/reject.txt
     interval: 86400
 
+  # Telegram电报
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/Telegram.list
+    path: ./ruleset/Telegram.list
+    interval: 86400
+
 # 规则
 rules:
   - RULE-SET,ChinaCompanyIp,全局直连
@@ -281,11 +296,12 @@ rules:
   - RULE-SET,ChinaDomain,全局直连
   - RULE-SET,Stun,全局直连
   - RULE-SET,Download,下载服务
+  - RULE-SET,Copilot,微软Copilot
+  - RULE-SET,OneDrive,OneDrive云
   - RULE-SET,MicrosoftCDN,微软大陆CDN
   - RULE-SET,Microsoft,微软大陆
-  - RULE-SET,OneDrive,OneDrive云
-  - RULE-SET,Copilot,微软Copilot
   - RULE-SET,Google,谷歌服务
+  - RULE-SET,Telegram,Telegram电报
   - RULE-SET,Spotify,Spotify音乐
   - RULE-SET,AdGuard,广告拦截
   - GEOIP,LAN,全局直连
