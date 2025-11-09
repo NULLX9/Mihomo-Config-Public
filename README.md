@@ -8,7 +8,7 @@
 
 ## 使用方式
 
-复制 [version](https://raw.githubusercontent.com/NULLX9/Mihomo-Config-Public/refs/heads/main/version/v20251108.yaml) 地址，导入到 *代理客户端* 的**覆写**选项中。<br>
+复制 [version](https://raw.githubusercontent.com/NULLX9/Mihomo-Config-Public/refs/heads/main/version/v20251109.yaml) 地址，导入到 *代理客户端* 的**覆写**选项中。<br>
 
 ## 部分链接
 
