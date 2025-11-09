@@ -56,8 +56,8 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Final.png
     type: select
     proxies:
-      - 全局直连
       - 节点选择
+      - 全局直连
 
   # 常用地区节点
   - name: 香港节点
