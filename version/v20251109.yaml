@@ -291,22 +291,22 @@ rule-providers:
 
 # 规则
 rules:
-  - RULE-SET,ChinaCompanyIp,全局直连
-  - RULE-SET,LocalAreaNetwork,全局直连
-  - RULE-SET,ChinaDomain,全局直连
-  - RULE-SET,Stun,全局直连
-  - RULE-SET,Download,下载服务
-  - RULE-SET,Copilot,微软Copilot
-  - RULE-SET,OneDrive,OneDrive云
-  - RULE-SET,MicrosoftCDN,微软大陆CDN
-  - RULE-SET,Microsoft,微软大陆
-  - RULE-SET,Google,谷歌服务
-  - RULE-SET,Telegram,Telegram电报
-  - RULE-SET,Spotify,Spotify音乐
-  - RULE-SET,AdGuard,广告拦截
-  - GEOIP,LAN,全局直连
-  - GEOIP,CN,全局直连
-  - MATCH,Final
+  - RULE-SET, ChinaCompanyIp, 全局直连
+  - RULE-SET, LocalAreaNetwork, 全局直连
+  - RULE-SET, ChinaDomain, 全局直连
+  - RULE-SET, Stun, 全局直连
+  - RULE-SET, Download, 下载服务
+  - RULE-SET, Copilot, 微软Copilot
+  - RULE-SET, OneDrive, OneDrive云
+  - RULE-SET, MicrosoftCDN, 微软大陆CDN
+  - RULE-SET, Microsoft, 微软大陆
+  - RULE-SET, Google, 谷歌服务
+  - RULE-SET, Telegram, Telegram电报
+  - RULE-SET, Spotify, Spotify音乐
+  - RULE-SET, AdGuard, 广告拦截
+  - GEOIP, LAN, 全局直连
+  - GEOIP, CN, 全局直连
+  - MATCH, Final
 
 ### ⬇⬇⬇分界线⬇⬇⬇ ### 以下为移动端添加
 # GeoData模式
