@@ -20,3 +20,4 @@
 [Clash Verge Rev](https://github.com/clash-verge-rev/clash-verge-rev)<br>
 ~~[clash-rules](https://github.com/Loyalsoldier/clash-rules)~~<br>
 [v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat)<br>
+[ios_rule_script](https://github.com/blackmatrix7/ios_rule_script)<br>

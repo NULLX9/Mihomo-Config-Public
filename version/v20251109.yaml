@@ -286,13 +286,13 @@ rule-providers:
     format: text
 
   # 广告
-  AdGuard:
+  Advertising:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockmihomo.yaml
-    path: ./ruleset/adblockmihomo.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Advertising/Advertising.list
+    path: ./ruleset/Advertising.list
     interval: 86400
-    format: yaml
+    format: text
 
   # Telegram电报
   Telegram:
@@ -317,7 +317,7 @@ rules:
   - RULE-SET,Google,谷歌服务
   - RULE-SET,Telegram,Telegram电报
   - RULE-SET,Spotify,Spotify音乐
-  - RULE-SET,AdGuard,广告拦截
+  - RULE-SET,Advertising,广告拦截
   - GEOIP,LAN,全局直连
   - GEOIP,CN,全局直连
   - MATCH,Final
