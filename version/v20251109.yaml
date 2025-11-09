@@ -310,7 +310,7 @@ rules:
 
 ### ⬇⬇⬇分界线⬇⬇⬇ ### 以下为移动端添加
 # GeoData模式
-geodata-mode: true
+geodata-mode: false
 geox-url:
   geoip: "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat"
   geosite: "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
