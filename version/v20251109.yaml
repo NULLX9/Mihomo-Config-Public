@@ -1,0 +1,305 @@
+### ⬇⬇⬇分界线⬇⬇⬇ ### 请勿更改
+# 代理组
+proxy-groups:
+  # 节点信息
+  - name: 节点信息
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Server.png
+    type: select
+    include-all: true
+    filter: (?i)剩余流量|下次重置|套餐到期
+
+  # 通用节点选择
+  - name: 节点选择
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Available.png
+    type: select
+    proxies:
+      - 自动选择
+      - 香港节点
+      - 台湾节点
+      - 新加坡节点
+      - 日本节点
+      - 美国节点
+      - 故障转移
+      - 手动选择
+      - 全局直连
+
+  # 通用直连选择
+  - name: 全局直连
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Direct.png
+    type: select
+    proxies:
+      - DIRECT
+
+  # 常用区域节点自动选择
+  - name: 自动选择
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Auto.png
+    type: url-test
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 香港节点
+      - 台湾节点
+      - 新加坡节点
+      - 日本节点
+
+  # 节点故障自动转移
+  - name: 故障转移
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Drill.png
+    type: fallback
+    include-all: true
+    filter: (?i)香港|HK|台湾|TW|新加坡|SG|日本|JP
+    url: https://www.gstatic.com/generate_204
+    interval: 250
+
+  # 剩余规则节点
+  - name: Final
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Final.png
+    type: select
+    proxies:
+      - 全局直连
+      - 节点选择
+
+  # 常用地区节点
+  - name: 香港节点
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Hong_Kong.png
+    include-all: true
+    type: url-test
+    interval: 300
+    tolerance: 50
+    filter: (?i)香港|HK
+  - name: 台湾节点
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Taiwan.png
+    include-all: true
+    type: url-test
+    interval: 300
+    tolerance: 50
+    filter: (?i)台湾|TW
+  - name: 新加坡节点
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Singapore.png
+    include-all: true
+    type: url-test
+    interval: 300
+    tolerance: 50
+    filter: (?i)新加坡|SG
+  - name: 日本节点
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Japan.png
+    include-all: true
+    type: url-test
+    interval: 300
+    tolerance: 50
+    filter: (?i)日本|JP
+  - name: 美国节点
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/United_States.png
+    include-all: true
+    type: url-test
+    interval: 300
+    tolerance: 50
+    filter: (?i)美国|US
+
+  # 其他地区节点
+  - name: 手动选择
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Area.png
+    include-all: true
+    type: select
+    exclude-filter: (?i)香港|台湾|新加坡|日本|美国|剩余流量|重置剩余|套餐到期|更新订阅|永久地址|大陆访问|群组|欢迎加入
+
+  # 全局节点
+  - name: GLOBAL
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Global.png
+    type: select
+    proxies:
+      - 自动选择
+      - 香港节点
+      - 台湾节点
+      - 新加坡节点
+      - 日本节点
+      - 美国节点
+      - 故障转移
+      - 全局直连
+  ### ⬆⬆⬆分界线⬆⬆⬆ ### 请勿更改
+
+  # 分流节点
+  - name: 微软大陆CDN
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Microsoft.png
+    type: select
+    proxies:
+      - 全局直连
+      - 节点选择
+
+  - name: 微软大陆
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Microsoft.png
+    type: select
+    proxies:
+      - 全局直连
+      - 节点选择
+
+  - name: 下载服务
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Download.png
+    type: select
+    proxies:
+      - 全局直连
+      - 节点选择
+
+  - name: OneDrive云
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/OneDrive.png
+    type: select
+    proxies:
+      - 全局直连
+      - 节点选择
+
+  - name: 广告拦截
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Advertising.png
+    type: select
+    proxies:
+      - REJECT
+      - 全局直连
+
+  - name: 微软Copilot
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Copilot.png
+    type: select
+    proxies:
+      - 节点选择
+      - 全局直连
+
+  - name: 谷歌服务
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Google_Search.png
+    type: select
+    proxies:
+      - 节点选择
+      - 全局直连
+
+  - name: Spotify音乐
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Spotify.png
+    type: select
+    proxies:
+      - 节点选择
+      - 手动选择
+      - 全局直连
+
+# 规则集
+rule-providers:
+  # 中国大陆直连域名
+  ChinaDomain:
+    type: http
+    behavior: classical
+    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/ChinaDomain.list
+    path: ./ruleset/ChinaDomain.list
+    interval: 86400
+
+  # 本地局域网
+  LocalAreaNetwork:
+    type: http
+    behavior: classical
+    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/LocalAreaNetwork.list
+    path: ./ruleset/LocalAreaNetwork.list
+    interval: 86400
+
+  # 中国大陆云服务商ip
+  ChinaCompanyIp:
+    type: http
+    behavior: classical
+    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/ChinaCompanyIp.list
+    path: ./ruleset/ChinaCompanyIp.list
+    interval: 86400
+
+  # 微软中国大陆CDN
+  MicrosoftCDN:
+    type: http
+    behavior: classical
+    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/MicrosoftCDN.list
+    path: ./ruleset/MicrosoftCDN.list
+    interval: 86400
+
+  # 微软中国大陆
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/Microsoft.list
+    path: ./ruleset/Microsoft.list
+    interval: 86400
+
+  # 微软Copilot
+  Copilot:
+    type: http
+    behavior: classical
+    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/Copilot.list
+    path: ./ruleset/Copilot.list
+    interval: 86400
+
+  # 谷歌服务
+  Google:
+    type: http
+    behavior: classical
+    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/Google.list
+    path: ./ruleset/Google.list
+    interval: 86400
+
+  # Spotify音乐
+  Spotify:
+    type: http
+    behavior: classical
+    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/Spotify.list
+    path: ./ruleset/Spotify.list
+    interval: 86400
+
+  # 下载
+  Download:
+    type: http
+    behavior: classical
+    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/Download.list
+    path: ./ruleset/Download.list
+    interval: 86400
+
+  # Stun(Tailscale)
+  Stun:
+    type: http
+    behavior: classical
+    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/Stun.list
+    path: ./ruleset/Stun.list
+    interval: 86400
+
+  # 微软OneDrive云
+  OneDrive:
+    type: http
+    behavior: classical
+    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/OneDrive.list
+    path: ./ruleset/OneDrive.list
+    interval: 86400
+
+  # 广告
+  AdGuard:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt
+    path: ./ruleset/reject.txt
+    interval: 86400
+
+# 规则
+rules:
+  - RULE-SET,ChinaCompanyIp,全局直连
+  - RULE-SET,LocalAreaNetwork,全局直连
+  - RULE-SET,ChinaDomain,全局直连
+  - RULE-SET,Stun,全局直连
+  - RULE-SET,Download,下载服务
+  - RULE-SET,MicrosoftCDN,微软大陆CDN
+  - RULE-SET,Microsoft,微软大陆
+  - RULE-SET,OneDrive,OneDrive云
+  - RULE-SET,Copilot,微软Copilot
+  - RULE-SET,Google,谷歌服务
+  - RULE-SET,Spotify,Spotify音乐
+  - RULE-SET,AdGuard,广告拦截
+  - GEOIP,LAN,全局直连
+  - GEOIP,CN,全局直连
+  - MATCH,Final
+
+### ⬇⬇⬇分界线⬇⬇⬇ ### 以下为移动端添加
+# GeoData模式
+geodata-mode: true
+geox-url:
+  geoip: "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat"
+  geosite: "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
+geo-auto-update: true
+geo-update-interval: 24
+
+# 局域网连接
+allow-lan: false
