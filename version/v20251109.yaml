@@ -288,8 +288,8 @@ rule-providers:
   AdGuard:
     type: http
     behavior: classical
-    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt
-    path: ./ruleset/reject.txt
+    url: https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockmihomo.yaml
+    path: ./ruleset/adblockmihomo.yaml
     interval: 86400
     format: yaml
 
