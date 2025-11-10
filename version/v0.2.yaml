@@ -186,33 +186,6 @@ proxy-groups:
 
 # 规则集
 rule-providers:
-  # 中国大陆直连域名
-  ChinaDomain:
-    type: http
-    behavior: classical
-    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/ChinaDomain.list
-    path: ./ruleset/ChinaDomain.list
-    interval: 86400
-    format: text
-
-  # 本地局域网
-  LocalAreaNetwork:
-    type: http
-    behavior: classical
-    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/LocalAreaNetwork.list
-    path: ./ruleset/LocalAreaNetwork.list
-    interval: 86400
-    format: text
-
-  # 中国大陆云服务商ip
-  ChinaCompanyIp:
-    type: http
-    behavior: classical
-    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/ChinaCompanyIp.list
-    path: ./ruleset/ChinaCompanyIp.list
-    interval: 86400
-    format: text
-
   # 微软中国大陆CDN
   MicrosoftCDN:
     type: http
@@ -249,48 +222,12 @@ rule-providers:
     interval: 86400
     format: text
 
-  # 谷歌FCM推送服务
-  GoogleFCM:
-    type: http
-    behavior: classical
-    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/GoogleFCM.list
-    path: ./ruleset/GoogleFCM.list
-    interval: 86400
-    format: text
-
-  # 谷歌中国
-  GoogleCN:
-    type: http
-    behavior: classical
-    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/GoogleCN.list
-    path: ./ruleset/GoogleCN.list
-    interval: 86400
-    format: text
-
   # Spotify音乐
   Spotify:
     type: http
     behavior: classical
     url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/Spotify.list
     path: ./ruleset/Spotify.list
-    interval: 86400
-    format: text
-
-  # 下载
-  Download:
-    type: http
-    behavior: classical
-    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/Download.list
-    path: ./ruleset/Download.list
-    interval: 86400
-    format: text
-
-  # Stun(Tailscale)
-  Stun:
-    type: http
-    behavior: classical
-    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/Stun.list
-    path: ./ruleset/Stun.list
     interval: 86400
     format: text
 
