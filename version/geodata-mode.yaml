@@ -1,0 +1,196 @@
+### ⬇⬇⬇分界线⬇⬇⬇ ### 请勿更改
+# 代理组
+proxy-groups:
+  # 节点信息
+  - name: 节点信息
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Server.png
+    type: select
+    include-all: true
+    filter: (?i)剩余流量|下次重置|套餐到期
+
+  # 通用节点选择
+  - name: 节点选择
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Available.png
+    type: select
+    proxies:
+      - 自动选择
+      - 香港节点
+      - 台湾节点
+      - 新加坡节点
+      - 日本节点
+      - 美国节点
+      - 故障转移
+      - 手动选择
+      - 全局直连
+
+  # 通用直连选择
+  - name: 全局直连
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Direct.png
+    type: select
+    proxies:
+      - DIRECT
+
+  # 常用区域节点自动选择
+  - name: 自动选择
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Auto.png
+    type: url-test
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 香港节点
+      - 台湾节点
+      - 新加坡节点
+      - 日本节点
+
+  # 节点故障自动转移
+  - name: 故障转移
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Drill.png
+    type: fallback
+    include-all: true
+    filter: (?i)香港|HK|台湾|TW|新加坡|SG|日本|JP
+    url: https://www.gstatic.com/generate_204
+    interval: 250
+
+  # 剩余规则节点
+  - name: Final
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Final.png
+    type: select
+    proxies:
+      - 节点选择
+      - 全局直连
+
+  # 常用地区节点
+  - name: 香港节点
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Hong_Kong.png
+    include-all: true
+    type: url-test
+    interval: 300
+    tolerance: 50
+    filter: (?i)香港|HK
+  - name: 台湾节点
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Taiwan.png
+    include-all: true
+    type: url-test
+    interval: 300
+    tolerance: 50
+    filter: (?i)台湾|TW
+  - name: 新加坡节点
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Singapore.png
+    include-all: true
+    type: url-test
+    interval: 300
+    tolerance: 50
+    filter: (?i)新加坡|SG
+  - name: 日本节点
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Japan.png
+    include-all: true
+    type: url-test
+    interval: 300
+    tolerance: 50
+    filter: (?i)日本|JP
+  - name: 美国节点
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/United_States.png
+    include-all: true
+    type: url-test
+    interval: 300
+    tolerance: 50
+    filter: (?i)美国|US
+
+  # 其他地区节点
+  - name: 手动选择
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Area.png
+    include-all: true
+    type: select
+    exclude-filter: (?i)香港|台湾|新加坡|日本|美国|剩余流量|重置剩余|套餐到期|更新订阅|永久地址|大陆访问|群组|欢迎加入
+
+  # 全局节点
+  - name: GLOBAL
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Global.png
+    type: select
+    proxies:
+      - 自动选择
+      - 香港节点
+      - 台湾节点
+      - 新加坡节点
+      - 日本节点
+      - 美国节点
+      - 故障转移
+      - 全局直连
+  ### ⬆⬆⬆分界线⬆⬆⬆ ### 请勿更改
+
+# 规则集
+rule-providers:
+  cn:
+    type: http
+    behavior: ipcidr
+    url: https://example.com/rules/cn.dat
+    path: ./ruleset/cn.dat
+    interval: 86400
+
+  private:
+    type: http
+    behavior: ipcidr
+    url: https://example.com/rules/private.dat
+    path: ./ruleset/private.dat
+    interval: 86400
+
+  geoip-only-cn-private-cn:
+    type: http
+    behavior: ipcidr
+    url: https://example.com/rules/geoip-only-cn-private.dat
+    path: ./ruleset/geoip-only-cn-private-cn.dat
+    interval: 86400
+
+  geoip-only-cn-private-private:
+    type: http
+    behavior: ipcidr
+    url: https://example.com/rules/geoip-only-cn-private.dat
+    path: ./ruleset/geoip-only-cn-private-private.dat
+    interval: 86400
+
+  geoip-asn-facebook:
+    type: http
+    behavior: ipcidr
+    url: https://example.com/rules/geoip-asn-facebook.dat
+    path: ./ruleset/geoip-asn-facebook.dat
+    interval: 86400
+
+  geoip-asn-telegram:
+    type: http
+    behavior: ipcidr
+    url: https://example.com/rules/geoip-asn-telegram.dat
+    path: ./ruleset/geoip-asn-telegram.dat
+    interval: 86400
+
+# 规则
+rules:
+  # 国内直连
+  - GEOIP,CN,全球直连
+  - GEOIP,PRIVATE,全球直连
+  - RULE-SET,cn,全球直连
+  - RULE-SET,private,全球直连
+  - RULE-SET,geoip-only-cn-private-cn,全球直连
+  - RULE-SET,geoip-only-cn-private-private,全球直连
+
+  # 国外走代理
+  - GEOIP,US,节点选择
+  - GEOIP,JP,节点选择
+  - GEOIP,facebook,节点选择
+  - GEOIP,telegram,节点选择
+  - RULE-SET,geoip-asn-facebook,节点选择
+  - RULE-SET,geoip-asn-telegram,节点选择
+
+  # 兜底规则
+  - MATCH,Final
+
+  ### ⬇⬇⬇分界线⬇⬇⬇ ### 以下为移动端添加
+# GeoData模式
+geodata-mode: true
+geox-url:
+  geoip: "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat"
+  geosite: "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
+geo-auto-update: true
+geo-update-interval: 24
+
+# 局域网连接
+allow-lan: false
