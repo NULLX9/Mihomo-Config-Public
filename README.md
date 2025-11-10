@@ -26,7 +26,7 @@
 ## 更新日志
 
 - v0.1
-已知问题：Google Play商店无法下载应用。
+  已知问题：Google Play商店无法下载应用。
 
 - v0.2
-使用[clash-rules](https://github.com/Loyalsoldier/clash-rules)仓库4个直连规则。
+  使用[clash-rules](https://github.com/Loyalsoldier/clash-rules)仓库4个直连规则。
