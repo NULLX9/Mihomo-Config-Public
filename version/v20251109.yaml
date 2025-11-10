@@ -276,7 +276,7 @@ rule-providers:
   GoogleCN:
     type: http
     behavior: classical
-    url: https://ruleset.zcsouls.com/Rules/Clash%Meta/GoogleCN.list
+    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/GoogleCN.list
     path: ./ruleset/GoogleCN.list
     interval: 86400
     format: text
