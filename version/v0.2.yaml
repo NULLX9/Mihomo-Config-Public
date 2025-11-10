@@ -147,13 +147,6 @@ proxy-groups:
       - 全局直连
       - 节点选择
 
-  - name: 下载服务
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Download.png
-    type: select
-    proxies:
-      - 全局直连
-      - 节点选择
-
   - name: 谷歌服务
     icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Google_Search.png
     type: select
