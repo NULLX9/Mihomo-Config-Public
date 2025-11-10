@@ -127,7 +127,7 @@ rule-providers:
     url: https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
     path: ./ruleset/gfwlist.txt
     interval: 86400
-    type: text
+    format: text
 
 # 规则
 rules:
