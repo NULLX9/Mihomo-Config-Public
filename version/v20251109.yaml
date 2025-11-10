@@ -161,6 +161,20 @@ proxy-groups:
       - 节点选择
       - 全局直连
 
+  - name: 谷歌FCM
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Dark/Google_Search.png
+    type: select
+    proxies:
+      - 节点选择
+      - 全局直连
+
+  - name: 谷歌中国
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Dark/Google.png
+    type: select
+    proxies:
+      - 全局直连
+      - 节点选择
+
   - name: Spotify音乐
     icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Spotify.png
     type: select
@@ -249,6 +263,24 @@ rule-providers:
     interval: 86400
     format: text
 
+  # 谷歌FCM推送服务
+  GoogleFCM:
+    type: http
+    behavior: classical
+    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/GoogleFCM.list
+    path: ./ruleset/GoogleFCM.list
+    interval: 86400
+    format: text
+
+  # 谷歌中国
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://ruleset.zcsouls.com/Rules/Clash%Meta/GoogleCN.list
+    path: ./ruleset/GoogleCN.list
+    interval: 86400
+    format: text
+
   # Spotify音乐
   Spotify:
     type: http
@@ -315,6 +347,8 @@ rules:
   - RULE-SET,MicrosoftCDN,微软大陆CDN
   - RULE-SET,Microsoft,微软大陆
   - RULE-SET,Google,谷歌服务
+  - RULE-SET,GoogleFCM,谷歌FCM
+  - RULE-SET,GoogleCN,谷歌中国
   - RULE-SET,Telegram,Telegram电报
   - RULE-SET,Spotify,Spotify音乐
   - RULE-SET,Advertising,广告拦截
