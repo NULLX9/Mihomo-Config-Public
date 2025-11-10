@@ -165,12 +165,12 @@ rule-providers:
 # 规则
 rules:
   # 国内直连
-  - GEOIP,CN,全球直连
-  - GEOIP,PRIVATE,全球直连
-  - RULE-SET,cn,全球直连
-  - RULE-SET,private,全球直连
-  - RULE-SET,geoip-only-cn-private-cn,全球直连
-  - RULE-SET,geoip-only-cn-private-private,全球直连
+  - GEOIP,CN,全局直连
+  - GEOIP,PRIVATE,全局直连
+  - RULE-SET,cn,全局直连
+  - RULE-SET,private,全局直连
+  - RULE-SET,geoip-only-cn-private-cn,全局直连
+  - RULE-SET,geoip-only-cn-private-private,全局直连
 
   # 国外走代理
   - GEOIP,US,节点选择
