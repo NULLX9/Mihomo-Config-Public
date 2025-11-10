@@ -125,9 +125,9 @@ rule-providers:
     type: http
     behavior: classical
     url: https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
-    path: ./ruleset/gfwlist.txt
+    path: ./ruleset/gfwlist.yaml
     interval: 86400
-    format: text
+    format: yaml
 
 # 规则
 rules:
