@@ -301,7 +301,6 @@ rules:
   - RULE-SET,Telegram,Telegram电报
   - RULE-SET,Spotify,Spotify音乐
   - RULE-SET,Advertising,广告拦截
-  - GEOIP,LAN,全局直连
   - GEOIP,CN,全局直连
   - MATCH,Final
 
