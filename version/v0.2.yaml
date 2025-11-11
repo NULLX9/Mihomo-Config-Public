@@ -313,6 +313,7 @@ geox-url:
   geosite: "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
 geo-auto-update: true
 geo-update-interval: 24
+geodata-loader: memconservative
 
 # 局域网连接
 allow-lan: false
