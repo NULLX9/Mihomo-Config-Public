@@ -254,7 +254,7 @@ rule-providers:
   # clash-rules直连域名
   clash-rules-direct:
     type: http
-    behavior: classical
+    behavior: domain
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt
     path: ./ruleset/direct.txt
     interval: 86400
@@ -263,7 +263,7 @@ rule-providers:
   # 私有网络专用
   Private:
     type: http
-    behavior: classical
+    behavior: domain
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt
     path: ./ruleset/private.txt
     interval: 86400
@@ -272,7 +272,7 @@ rule-providers:
   # 局域网ip及保留ip
   lancidr:
     type: http
-    behavior: classical
+    behavior: domain
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt
     path: ./ruleset/lancidr.txt
     interval: 86400
@@ -281,7 +281,7 @@ rule-providers:
   # 常用直连软件
   Applications:
     type: http
-    behavior: classical
+    behavior: domain
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt
     path: ./ruleset/applications.txt
     interval: 86400

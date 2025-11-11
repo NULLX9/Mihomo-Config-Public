@@ -18,7 +18,7 @@
 [ClashMi](https://github.com/KaringX/clashmi)<br>
 [Clash Party](https://github.com/mihomo-party-org/clash-party)<br>
 [Clash Verge Rev](https://github.com/clash-verge-rev/clash-verge-rev)<br>
-~~[clash-rules](https://github.com/Loyalsoldier/clash-rules)~~<br>
+[clash-rules](https://github.com/Loyalsoldier/clash-rules)<br>
 [v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat)<br>
 [ios_rule_script](https://github.com/blackmatrix7/ios_rule_script)<br>
 [GFWList](https://github.com/gfwlist/gfwlist)<br>
@@ -30,7 +30,7 @@
 
 - v0.2<br>
   使用[clash-rules](https://github.com/Loyalsoldier/clash-rules)仓库4个直连规则。<br>
-  已知问题：mihomo内核无法使用clash-rules。<br>
+  已知问题：使用[clash-rules](https://github.com/Loyalsoldier/clash-rules)时规则类型应为domain。<br>
 
 - v0.3<br>
   
