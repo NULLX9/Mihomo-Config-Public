@@ -309,6 +309,8 @@ rules:
   - RULE-SET,Spotify,Spotify音乐
   - RULE-SET,Advertising,广告拦截
   - GEOIP,CN,全局直连
+  - GEOSITE,CN,全局直连
+  - GEOSITE,microsoft@cn,全局直连
   - MATCH,Final
 
 ### ⬇⬇⬇分界线⬇⬇⬇ ### 以下为移动端添加
