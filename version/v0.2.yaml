@@ -272,7 +272,7 @@ rule-providers:
   # 局域网ip及保留ip
   lancidr:
     type: http
-    behavior: domain
+    behavior: ipcidr
     url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt
     path: ./ruleset/lancidr.txt
     interval: 86400
