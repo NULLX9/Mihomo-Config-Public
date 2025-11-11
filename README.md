@@ -30,7 +30,7 @@
 
 - v0.2<br>
   使用[clash-rules](https://github.com/Loyalsoldier/clash-rules)仓库4个直连规则。<br>
-  已知问题：mihomo内核无法使用clash-rules.<br>
+  已知问题：mihomo内核无法使用clash-rules。<br>
 
 - v0.3<br>
   
