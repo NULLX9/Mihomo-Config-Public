@@ -33,4 +33,4 @@
   已知问题：使用[clash-rules](https://github.com/Loyalsoldier/clash-rules)时规则类型应为domain。<br>
 
 - v0.3<br>
-  
+  使用geodata-cn规则作为主要直连规则。<br>
