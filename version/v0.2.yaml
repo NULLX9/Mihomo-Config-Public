@@ -30,12 +30,12 @@ proxy-groups:
     proxies:
       - DIRECT
 
-  # 跳过规则
-  - name: 跳过规则
+  # 绕过规则
+  - name: 绕过规则
     icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Bypass.png
     type: select
     proxies:
-      - BYPASS
+      - PASS
 
   # 常用区域节点自动选择
   - name: 自动选择
