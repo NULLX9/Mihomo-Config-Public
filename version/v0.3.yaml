@@ -173,8 +173,15 @@ proxy-groups:
     type: select
     proxies:
       - 节点选择
-      - 新加坡节点
       - 手动选择
+      - 全局直连
+
+  - name: Telegram电报
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Telegram.png
+    type: select
+    proxies:
+      - 节点选择
+      - 新加坡节点
       - 全局直连
 
 # 规则集
@@ -242,6 +249,15 @@ rule-providers:
     interval: 86400
     format: text
 
+  # Telegram电报
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/Telegram.list
+    path: ./ruleset/Telegram.list
+    interval: 86400
+    format: text
+
 # 规则
 rules:
   - GEOIP,CN,GeoIP-CN
@@ -254,6 +270,7 @@ rules:
   - RULE-SET,Microsoft,微软中国
   - RULE-SET,OneDrive,OneDrive云
   - RULE-SET,Spotify,Spotify音乐
+  - RULE-SET,Telegram,Telegram电报
   - MATCH,Final
 
 # GeoData模式
