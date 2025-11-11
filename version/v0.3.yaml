@@ -168,6 +168,15 @@ proxy-groups:
       - 节点选择
       - 全局直连
 
+  - name: Spotify音乐
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Spotify.png
+    type: select
+    proxies:
+      - 节点选择
+      - 新加坡节点
+      - 手动选择
+      - 全局直连
+
 # 规则集
 rule-providers:
   # 微软中国CDN
@@ -224,6 +233,15 @@ rule-providers:
     interval: 86400
     format: text
 
+  # Spotify音乐
+  Spotify:
+    type: http
+    behavior: classical
+    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/Spotify.list
+    path: ./ruleset/Spotify.list
+    interval: 86400
+    format: text
+
 # 规则
 rules:
   - GEOIP,CN,GeoIP-CN
@@ -235,6 +253,7 @@ rules:
   - RULE-SET,MicrosoftCDN,微软中国
   - RULE-SET,Microsoft,微软中国
   - RULE-SET,OneDrive,OneDrive云
+  - RULE-SET,Spotify,Spotify音乐
   - MATCH,Final
 
 # GeoData模式
