@@ -8,9 +8,9 @@ proxy-groups:
     include-all: true
     filter: (?i)剩余流量|下次重置|套餐到期
 
-  # 通用节点选择
+  # 主要节点选择
   - name: 节点选择
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Available.png
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Proxy.png
     type: select
     proxies:
       - 自动选择
@@ -23,14 +23,14 @@ proxy-groups:
       - 手动选择
       - 全局直连
 
-  # 通用直连选择
+  # 直连节点
   - name: 全局直连
     icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Direct.png
     type: select
     proxies:
       - DIRECT
 
-  # 绕过规则
+  # 绕过规则节点
   - name: 绕过规则
     icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Bypass.png
     type: select
@@ -237,7 +237,6 @@ rules:
   - RULE-SET,OneDrive,OneDrive云
   - MATCH,Final
 
-### ⬇⬇⬇分界线⬇⬇⬇ ### 以下为移动端添加
 # GeoData模式
 geodata-mode: true
 geox-url:
@@ -247,5 +246,5 @@ geo-auto-update: true
 geo-update-interval: 24
 geodata-loader: memconservative
 
-# 局域网连接
+# 局域网连接模式
 allow-lan: false
