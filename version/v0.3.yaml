@@ -1,4 +1,4 @@
-### ⬇⬇⬇分界线⬇⬇⬇ ### 请勿更改
+### ⬇⬇⬇分界线⬇⬇⬇ ### 全局配置
 # 代理组
 proxy-groups:
   # 节点信息
@@ -123,7 +123,7 @@ proxy-groups:
       - 美国节点
       - 故障转移
       - 全局直连
-  ### ⬆⬆⬆分界线⬆⬆⬆ ### 请勿更改
+  ### ⬆⬆⬆分界线⬆⬆⬆ ### 全局配置
 
   # 分流节点
   - name: GeoIP-CN
@@ -273,14 +273,90 @@ rules:
   - RULE-SET,Telegram,Telegram电报
   - MATCH,Final
 
-# GeoData模式
+### ⬇⬇⬇全局配置⬇⬇⬇ ###
+# GeoIP数据模式
 geodata-mode: true
 geox-url:
   geoip: "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat"
   geosite: "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
 geo-auto-update: true
 geo-update-interval: 24
+
+# Geo文件加载模式
 geodata-loader: memconservative
 
 # 局域网连接模式
 allow-lan: false
+
+# 日志级别
+log-level: info
+
+# IPv6
+ipv6: true
+
+# TCP Keep Alive设置
+keep-alive-interval: 15
+keep-alive-idle: 15
+disable-keep-alive: true
+
+# 统一延迟
+unified-delay: true
+### ⬆⬆⬆全局配置⬆⬆⬆ ###
+
+# DNS
+dns:
+  enable: true
+  cache-algorithm: arc
+  ipv6: true
+  enhanced-mode: fake-ip
+  fakp-ip-range: 198.18.0.1/16
+  fake-ip-range6: fc00::/18
+  fake-ip-filter-mode: blacklist
+  use-hosts: false
+  use-system-hosts: false
+  respect-rules: true
+  default-nameserver:
+    - 223.5.5.5
+    - 8.8.8.8
+  nameserver-policy:
+    "geosite:cn": https://dns.alidns.com/dns-query
+    "geosite:geolocation-!cn": https://dns.google/dns-query
+  proxy-server-nameserver:
+    - https://dns.google/dns-query
+    - https://dns.alidns.com/dns-query
+  direct-nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  direct-nameserver-follow-policy: true
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://dns.google/dns-query
+  fallback:
+    - https://1.1.1.1/dns-query
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+    domain:
+      - "+.google.com"
+      - "+.facebook.com"
+      - "+.youtube.com"
+      - "+.twitter.com"
+
+# 域名嗅探
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: true
+  sniff:
+    HTTP:
+      ports:
+        - 80
+        - 443
+      override-destination: true
+    TLS:
+      ports:
+        - 443
