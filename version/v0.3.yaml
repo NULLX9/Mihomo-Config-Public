@@ -126,14 +126,6 @@ proxy-groups:
   ### ⬆⬆⬆分界线⬆⬆⬆ ### 全局配置
 
   # 分流节点
-  - name: 广告拦截
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Advertising.png
-    type: select
-    proxies:
-      - REJECT
-      - 全局直连
-      - 绕过规则
-
   - name: GeoIP-CN
     icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/China_Map.png
     type: select
