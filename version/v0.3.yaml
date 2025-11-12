@@ -268,7 +268,6 @@ rule-providers:
 
 # 规则
 rules:
-  - GEOSITE,category-ads-all,广告拦截
   - GEOIP,CN,GeoIP-CN
   - RULE-SET,Google,谷歌服务
   - RULE-SET,GoogleCN,谷歌服务
