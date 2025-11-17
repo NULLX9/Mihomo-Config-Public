@@ -140,6 +140,14 @@ proxy-groups:
       - 全局直连
       - 绕过规则
 
+  - name: 广告拦截
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Advertising.png
+    type: select
+    proxies:
+      - REJECT
+      - 全局直连
+      - 绕过规则
+
   - name: 微软中国
     icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Microsoft.png
     type: select
@@ -258,8 +266,18 @@ rule-providers:
     interval: 86400
     format: text
 
+  # 广告
+  AdGuard:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt
+    path: ./ruleset/reject.txt
+    interval: 86400
+    format: yaml
+
 # 规则
 rules:
+  - RULE-SET,AdGuard,广告拦截
   - GEOIP,CN,GeoIP-CN
   - RULE-SET,Google,谷歌服务
   - RULE-SET,GoogleCN,谷歌服务
