@@ -35,3 +35,7 @@
 
 - v0.3<br>
   使用geodata-cn规则作为主要直连规则。<br>
+
+- v0.5<br>
+  添加geosite:catetory-ads-all广告拦截规则；<br>
+  取消覆写dns和域名嗅探。<br>
