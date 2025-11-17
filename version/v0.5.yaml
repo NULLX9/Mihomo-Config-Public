@@ -301,7 +301,7 @@ allow-lan: false
 log-level: info
 
 # IPv6
-ipv6: true
+# ipv6: true
 
 # TCP Keep Alive设置
 keep-alive-interval: 15
