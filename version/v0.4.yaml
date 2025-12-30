@@ -334,8 +334,7 @@ dns:
   use-system-hosts: false
   respect-rules: true
   default-nameserver:
-    - 223.5.5.5
-    - 8.8.8.8
+    - 127.0.0.1/5591
   nameserver-policy:
     "geosite:cn": https://dns.alidns.com/dns-query
     "geosite:geolocation-!cn": https://dns.google/dns-query
