@@ -1,0 +1,419 @@
+# ============================================================
+# Mihomo Config Override — v0.7
+# 适用于 Mihomo 内核的覆写配置文件
+# 更新日期: 2026-05-26
+# ============================================================
+
+# ============================================================
+# 代理组 (proxy-groups)
+# ============================================================
+proxy-groups:
+  # --- 信息与选择 ---
+
+  # 节点信息（订阅流量/到期信息）
+  - name: 节点信息
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Server.png
+    type: select
+    include-all: true
+    filter: (?i)剩余流量|下次重置|套餐到期
+
+  # 主策略组
+  - name: 节点选择
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Proxy.png
+    type: select
+    proxies:
+      - 自动选择
+      - 香港节点
+      - 台湾节点
+      - 新加坡节点
+      - 日本节点
+      - 美国节点
+      - 故障转移
+      - 手动选择
+      - 全局直连
+
+  # 直连
+  - name: 全局直连
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Direct.png
+    type: select
+    proxies:
+      - DIRECT
+
+  # 绕过规则（不解包、不匹配规则）
+  - name: 绕过规则
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Bypass.png
+    type: select
+    proxies:
+      - PASS
+
+  # --- 自动化策略 ---
+
+  # 自动测速选择（常用区域）
+  - name: 自动选择
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Auto.png
+    type: url-test
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 香港节点
+      - 台湾节点
+      - 新加坡节点
+      - 日本节点
+
+  # 故障自动转移
+  - name: 故障转移
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Drill.png
+    type: fallback
+    include-all: true
+    filter: (?i)香港|HK|台湾|TW|新加坡|SG|日本|JP
+    url: https://www.gstatic.com/generate_204
+    interval: 250
+
+  # 兜底策略（MATCH 规则使用）
+  - name: Final
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Final.png
+    type: select
+    proxies:
+      - 节点选择
+      - 全局直连
+
+  # --- 地区节点（自动测速，内部使用） ---
+
+  - name: 香港节点
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Hong_Kong.png
+    type: url-test
+    include-all: true
+    interval: 300
+    tolerance: 50
+    filter: (?i)香港|HK
+    hidden: true
+    no-alert: true
+
+  - name: 台湾节点
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Taiwan.png
+    type: url-test
+    include-all: true
+    interval: 300
+    tolerance: 50
+    filter: (?i)台湾|TW
+    hidden: true
+    no-alert: true
+
+  - name: 新加坡节点
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Singapore.png
+    type: url-test
+    include-all: true
+    interval: 300
+    tolerance: 50
+    filter: (?i)新加坡|SG
+    hidden: true
+    no-alert: true
+
+  - name: 日本节点
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Japan.png
+    type: url-test
+    include-all: true
+    interval: 300
+    tolerance: 50
+    filter: (?i)日本|JP
+    hidden: true
+    no-alert: true
+
+  - name: 美国节点
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/United_States.png
+    type: url-test
+    include-all: true
+    interval: 300
+    tolerance: 50
+    filter: (?i)美国|US
+    hidden: true
+    no-alert: true
+
+  # --- 手动选择 ---
+
+  # 其他地区节点（排除已分类地区 + 非节点信息）
+  - name: 手动选择
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Area.png
+    type: select
+    include-all: true
+    exclude-filter: (?i)香港|台湾|新加坡|日本|美国|剩余流量|重置剩余|套餐到期|更新订阅|永久地址|大陆访问|群组|欢迎加入
+
+  # --- TUN 模式全局代理（按需使用） ---
+  # 当前未被 rules 引用，仅作为 TUN 模式下的手动全局切换入口
+  - name: GLOBAL
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Global.png
+    type: select
+    proxies:
+      - 自动选择
+      - 香港节点
+      - 台湾节点
+      - 新加坡节点
+      - 日本节点
+      - 美国节点
+      - 故障转移
+      - 全局直连
+
+  # --- 分流策略组 ---
+
+  - name: GeoIP-CN
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/China_Map.png
+    type: select
+    proxies:
+      - 全局直连
+      - 绕过规则
+
+  - name: GeoSite-CN
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/China_Map.png
+    type: select
+    proxies:
+      - 全局直连
+      - 绕过规则
+
+  - name: 广告拦截
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Advertising.png
+    type: select
+    proxies:
+      - REJECT
+      - 全局直连
+      - 绕过规则
+
+  - name: 微软中国
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Microsoft.png
+    type: select
+    proxies:
+      - 全局直连
+      - 节点选择
+
+  - name: 微软Copilot
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Copilot.png
+    type: select
+    proxies:
+      - 节点选择
+      - 全局直连
+
+  - name: OneDrive云
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/OneDrive.png
+    type: select
+    proxies:
+      - 全局直连
+      - 节点选择
+
+  - name: 谷歌服务
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Google_Search.png
+    type: select
+    proxies:
+      - 节点选择
+      - 全局直连
+
+  - name: Spotify音乐
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Spotify.png
+    type: select
+    proxies:
+      - 节点选择
+      - 手动选择
+      - 全局直连
+
+  - name: Telegram电报
+    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Telegram.png
+    type: select
+    proxies:
+      - 节点选择
+      - 新加坡节点
+      - 全局直连
+
+# ============================================================
+# 规则集 (rule-providers)
+# ============================================================
+rule-providers:
+  # 微软中国 CDN
+  MicrosoftCDN:
+    type: http
+    behavior: classical
+    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/MicrosoftCDN.list
+    path: ./ruleset/MicrosoftCDN.list
+    interval: 86400
+    format: text
+
+  # 微软中国
+  Microsoft:
+    type: http
+    behavior: classical
+    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/Microsoft.list
+    path: ./ruleset/Microsoft.list
+    interval: 86400
+    format: text
+
+  # 微软 Copilot
+  Copilot:
+    type: http
+    behavior: classical
+    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/Copilot.list
+    path: ./ruleset/Copilot.list
+    interval: 86400
+    format: text
+
+  # 微软 OneDrive
+  OneDrive:
+    type: http
+    behavior: classical
+    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/OneDrive.list
+    path: ./ruleset/OneDrive.list
+    interval: 86400
+    format: text
+
+  # 谷歌服务
+  Google:
+    type: http
+    behavior: classical
+    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/Google.list
+    path: ./ruleset/Google.list
+    interval: 86400
+    format: text
+
+  # 谷歌中国（如 google.cn 等国内域名）
+  GoogleCN:
+    type: http
+    behavior: classical
+    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/GoogleCN.list
+    path: ./ruleset/GoogleCN.list
+    interval: 86400
+    format: text
+
+  # Spotify 音乐
+  Spotify:
+    type: http
+    behavior: classical
+    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/Spotify.list
+    path: ./ruleset/Spotify.list
+    interval: 86400
+    format: text
+
+  # Telegram 电报
+  Telegram:
+    type: http
+    behavior: classical
+    url: https://ruleset.zcsouls.com/Rules/Clash%20Meta/Telegram.list
+    path: ./ruleset/Telegram.list
+    interval: 86400
+    format: text
+
+# ============================================================
+# 规则 (rules)
+# 优先级: 从上到下依次匹配
+# 广告拦截 > 应用分流 > GEOIP-CN > GeoSite-CN > MATCH
+# ============================================================
+rules:
+  # 广告拦截（最高优先级）
+  - GEOSITE,category-ads-all,广告拦截
+
+  # 微软服务（先于 GeoSite-CN，防止 officecdn 等 CN 域名被误判直连）
+  - GEOSITE,microsoft@cn,微软中国
+  - RULE-SET,Copilot,微软Copilot
+  - RULE-SET,MicrosoftCDN,微软中国
+  - RULE-SET,Microsoft,微软中国
+  - RULE-SET,OneDrive,OneDrive云
+
+  # 谷歌服务（在 GEOIP-CN 之前，确保谷歌服务走代理）
+  - RULE-SET,Google,谷歌服务
+  - RULE-SET,GoogleCN,谷歌服务
+
+  # 中国 GEOIP（IP 地理库匹配 CN）
+  - GEOIP,CN,GeoIP-CN
+
+  # 中国 GeoSite（域名规则库匹配 CN）
+  - GEOSITE,CN,GeoSite-CN
+
+  # 其他应用服务
+  - RULE-SET,Spotify,Spotify音乐
+  - RULE-SET,Telegram,Telegram电报
+
+  # 兜底规则
+  - MATCH,Final
+
+# ============================================================
+# DNS 防污染
+# 国内域名走国内 DNS，国外域名走加密 DNS
+# ============================================================
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - "*.home.arpa"
+    - "localhost.ptlogin2.qq.com"
+    - "*.msftncsi.com"
+    - "*.msftconnecttest.com"
+    # NTP 服务
+    - "time.*.com"
+    - "time.*.gov"
+    - "ntp.*.com"
+  # 国内 DNS（用于解析国内域名）
+  nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+    - https://doh.pub/dns-query
+  # 国外 DNS（用于被墙域名 fallback）
+  fallback:
+    - https://dns.google/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - tls://8.8.4.4:853
+  # fallback 过滤：只有非 CN 且命中 gfw 列表的域名才走 fallback
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    geosite:
+      - gfw
+    ipcidr:
+      - 240.0.0.0/4
+
+# ============================================================
+# 域名嗅探（默认关闭，按需启用）
+# 启用后可根据 TLS/HTTP 流量中的 SNI 进行更精准分流
+# 注意：部分应用可能不兼容，如有问题请关闭
+# ============================================================
+# sniffer:
+#   enable: true
+#   sniffing:
+#     - tls
+#     - http
+#   force-domain:
+#     - +.net
+#     - +.com
+#   port-whitelist:
+#     - 80
+#     - 443
+
+# ============================================================
+# 全局设置
+# ============================================================
+
+# GeoIP 数据模式
+geodata-mode: true
+geox-url:
+  geoip: "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat"
+  geosite: "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
+geo-auto-update: true
+geo-update-interval: 24
+
+# Geo 文件加载模式
+# standard: 全部载入内存，性能最优（推荐，适用于内存 >= 2GB 的设备）
+# memconservative: 按需从磁盘读取，省内存但延迟较高
+geodata-loader: standard
+
+# 局域网连接
+allow-lan: false
+
+# 日志级别: debug | info | warning | error | silent
+log-level: info
+
+# IPv6（默认关闭）
+# ipv6: true
+
+# TCP Keep-Alive
+disable-keep-alive: true
+
+# 统一延迟显示
+unified-delay: true
