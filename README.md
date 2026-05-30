@@ -8,7 +8,7 @@
 
 ## 使用方式
 
-复制 [v0.7](https://raw.githubusercontent.com/NULLX9/Mihomo-Config-Public/refs/heads/main/version/v0.7.yaml) 地址，导入到 *代理客户端* 的**覆写**选项中。<br>
+复制 [v0.5](https://raw.githubusercontent.com/NULLX9/Mihomo-Config-Public/refs/heads/main/version/v0.5.yaml) 地址，导入到 *代理客户端* 的**覆写**选项中。<br>
 
 ## 部分链接
 
@@ -39,16 +39,3 @@
 - v0.5<br>
   添加geosite:catetory-ads-all广告拦截规则；<br>
   取消覆写dns和域名嗅探。<br>
-
-- v0.6<br>
-  添加root权限相关配置。<br>
-
-- v0.7<br>
-  **修复**：移除与 `disable-keep-alive` 冲突的无效 Keep-Alive 参数；<br>
-  **修复**：微软服务规则移至 `GEOSITE,CN` 之前，防止 CDN 误判直连；<br>
-  **优化**：地区 url-test 组添加 `hidden` + `no-alert`，减少界面干扰；<br>
-  **优化**：`geodata-loader` 改为 `standard` 提升匹配性能；<br>
-  **优化**：规则重新排序为最佳实践（广告拦截 > 应用分流 > GeoIP > GeoSite > MATCH）；<br>
-  **新增**：基础 DNS 防污染配置（Fake-IP 模式）；<br>
-  **新增**：域名嗅探配置（默认注释，按需启用）；<br>
-  **改进**：统一注释风格、添加文件头与区块说明。<br>
