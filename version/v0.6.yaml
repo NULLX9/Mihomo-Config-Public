@@ -58,7 +58,7 @@ proxy-groups:
     url: https://cp.cloudflare.com/generate_204
     interval: 250
 
-  # 剩余规则节点
+  # 无规则节点
   - name: Final
     icon: https://gh-proxy.org/https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Final.png
     type: select
