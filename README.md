@@ -8,7 +8,7 @@
 
 ## 使用方式
 
-复制 [v0.5](https://raw.githubusercontent.com/NULLX9/Mihomo-Config-Public/refs/heads/main/version/v0.5.yaml) 地址，导入到 *代理客户端* 的**覆写**选项中。<br>
+复制 [v0.6](https://raw.githubusercontent.com/NULLX9/Mihomo-Config-Public/refs/heads/main/version/v0.6.yaml) 地址，导入到 *代理客户端* 的**覆写**选项中。<br>
 
 ## 部分链接
 
@@ -39,3 +39,10 @@
 - v0.5<br>
   添加geosite:catetory-ads-all广告拦截规则；<br>
   取消覆写dns和域名嗅探。<br>
+
+- v0.6<br>
+  **调整**：url-test 测速间隔缩短至 60s，加快故障切换；<br>
+  **调整**：tolerance 统一为 150ms，减少频繁抖动；<br>
+  **新增**：url-test 与 fallback 组显式指定测速 URL（Cloudflare 204）；<br>
+  **修复**：图标链接添加 gh-proxy 代理前缀，解决国内访问问题；<br>
+  **优化**：精简注释和分界线标记，配置更清爽。<br>
