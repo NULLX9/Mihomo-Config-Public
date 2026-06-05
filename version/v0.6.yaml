@@ -2,14 +2,14 @@
 proxy-groups:
   # 节点信息
   - name: 节点信息
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Server.png
+    icon: https://gh-proxy.org/https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Server.png
     type: select
     include-all: true
     filter: (?i)剩余流量|下次重置|套餐到期
 
   # 主要节点选择
   - name: 节点选择
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Proxy.png
+    icon: https://gh-proxy.org/https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Proxy.png
     type: select
     proxies:
       - 自动选择
@@ -24,21 +24,21 @@ proxy-groups:
 
   # 直连节点
   - name: 全局直连
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Direct.png
+    icon: https://gh-proxy.org/https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Direct.png
     type: select
     proxies:
       - DIRECT
 
   # 绕过规则节点
   - name: 绕过规则
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Bypass.png
+    icon: https://gh-proxy.org/https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Bypass.png
     type: select
     proxies:
       - PASS
 
   # 常用区域节点自动选择
   - name: 自动选择
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Auto.png
+    icon: https://gh-proxy.org/https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Auto.png
     type: url-test
     interval: 300
     tolerance: 150
@@ -50,7 +50,7 @@ proxy-groups:
 
   # 节点故障自动转移
   - name: 故障转移
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Drill.png
+    icon: https://gh-proxy.org/https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Drill.png
     type: fallback
     include-all: true
     filter: (?i)香港|HK|台湾|TW|新加坡|SG|日本|JP
@@ -59,7 +59,7 @@ proxy-groups:
 
   # 剩余规则节点
   - name: Final
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Final.png
+    icon: https://gh-proxy.org/https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Final.png
     type: select
     proxies:
       - 节点选择
@@ -67,35 +67,35 @@ proxy-groups:
 
   # 常用地区节点
   - name: 香港节点
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Hong_Kong.png
+    icon: https://gh-proxy.org/https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Hong_Kong.png
     include-all: true
     type: url-test
     interval: 300
     tolerance: 150
     filter: (?i)香港|HK
   - name: 台湾节点
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Taiwan.png
+    icon: https://gh-proxy.org/https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Taiwan.png
     include-all: true
     type: url-test
     interval: 300
     tolerance: 150
     filter: (?i)台湾|TW
   - name: 新加坡节点
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Singapore.png
+    icon: https://gh-proxy.org/https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Singapore.png
     include-all: true
     type: url-test
     interval: 300
     tolerance: 150
     filter: (?i)新加坡|SG
   - name: 日本节点
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Japan.png
+    icon: https://gh-proxy.org/https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Japan.png
     include-all: true
     type: url-test
     interval: 300
     tolerance: 150
     filter: (?i)日本|JP
   - name: 美国节点
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/United_States.png
+    icon: https://gh-proxy.org/https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/United_States.png
     include-all: true
     type: url-test
     interval: 300
@@ -104,14 +104,14 @@ proxy-groups:
 
   # 其他地区节点
   - name: 手动选择
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Area.png
+    icon: https://gh-proxy.org/https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Area.png
     include-all: true
     type: select
     exclude-filter: (?i)香港|台湾|新加坡|日本|美国|剩余流量|重置剩余|套餐到期|更新订阅|永久地址|大陆访问|群组|欢迎加入
 
   # 全局节点
   - name: GLOBAL
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Global.png
+    icon: https://gh-proxy.org/https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Global.png
     type: select
     proxies:
       - 自动选择
@@ -125,21 +125,21 @@ proxy-groups:
 
   # 分流节点
   - name: GeoIP-CN
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/China_Map.png
+    icon: https://gh-proxy.org/https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/China_Map.png
     type: select
     proxies:
       - 全局直连
       - 绕过规则
 
   - name: GeoSite-CN
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/China_Map.png
+    icon: https://gh-proxy.org/https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/China_Map.png
     type: select
     proxies:
       - 全局直连
       - 绕过规则
 
   - name: 广告拦截
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Advertising.png
+    icon: https://gh-proxy.org/https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Advertising.png
     type: select
     proxies:
       - REJECT
@@ -147,35 +147,35 @@ proxy-groups:
       - 绕过规则
 
   - name: 微软中国
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Microsoft.png
+    icon: https://gh-proxy.org/https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Microsoft.png
     type: select
     proxies:
       - 全局直连
       - 节点选择
 
   - name: 微软Copilot
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Copilot.png
+    icon: https://gh-proxy.org/https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Copilot.png
     type: select
     proxies:
       - 节点选择
       - 全局直连
 
   - name: OneDrive云
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/OneDrive.png
+    icon: https://gh-proxy.org/https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/OneDrive.png
     type: select
     proxies:
       - 全局直连
       - 节点选择
 
   - name: 谷歌服务
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Google_Search.png
+    icon: https://gh-proxy.org/https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Google_Search.png
     type: select
     proxies:
       - 节点选择
       - 全局直连
 
   - name: Spotify音乐
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Spotify.png
+    icon: https://gh-proxy.org/https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Spotify.png
     type: select
     proxies:
       - 节点选择
@@ -183,7 +183,7 @@ proxy-groups:
       - 全局直连
 
   - name: Telegram电报
-    icon: https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Telegram.png
+    icon: https://gh-proxy.org/https://raw.githubusercontent.com/Koolson/Qure/refs/heads/master/IconSet/Color/Telegram.png
     type: select
     proxies:
       - 节点选择
