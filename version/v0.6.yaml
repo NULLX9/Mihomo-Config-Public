@@ -289,22 +289,19 @@ rules:
 # GeoIP数据模式
 geodata-mode: true
 geox-url:
-  geoip: "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat"
-  geosite: "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
+  geoip: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat"
+  geosite: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat"
 geo-auto-update: true
 geo-update-interval: 24
 
 # Geo文件加载模式
-geodata-loader: memconservative
+geodata-loader: standard
 
 # 局域网连接模式
 allow-lan: false
 
 # 日志级别
-log-level: info
-
-# IPv6
-# ipv6: true
+log-level: silent
 
 # TCP Keep Alive设置
 keep-alive-interval: 15
