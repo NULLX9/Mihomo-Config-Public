@@ -8,6 +8,7 @@
 
 ## 使用方式
 
+复制 [v0.7](https://raw.githubusercontent.com/NULLX9/Mihomo-Config-Public/refs/heads/main/version/v0.7.yaml) 地址，导入到 *代理客户端* 的**覆写**选项中。<br>
 复制 [v0.6](https://raw.githubusercontent.com/NULLX9/Mihomo-Config-Public/refs/heads/main/version/v0.6.yaml) 地址，导入到 *代理客户端* 的**覆写**选项中。<br>
 
 ## 部分链接
@@ -46,3 +47,8 @@
   **新增**：url-test 与 fallback 组显式指定测速 URL（Cloudflare 204）；<br>
   **修复**：图标链接添加 gh-proxy 代理前缀，解决国内访问问题；<br>
   **优化**：精简注释和分界线标记，配置更清爽。<br>
+
+- v0.7<br>
+  **调整**：所有 url-test 类型改为 load-balance，流量分散到多个节点；<br>
+  **新增**：load-balance 组统一添加 strategy: round-robin 轮询策略；<br>
+  **移除**：load-balance 组中无效的 tolerance 参数。<br>
